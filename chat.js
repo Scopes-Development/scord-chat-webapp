@@ -23,7 +23,7 @@
         msgsSent = 0
 
         function sendMsg() {
-            if (msgsSent === 10) {
+            if (msgsSent === 20) {
                 alert("Woah! Chill for a moment before you start sending more messages.");
                 msgsSent = 0;
                 return

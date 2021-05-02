@@ -11,8 +11,6 @@
                 return
             }
 
-            var info = JSON.parse(localStorage.getItem('myStorage'));
-
             var data = {
                 "username": insertedUserName,
                 "friend": null
