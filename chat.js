@@ -4,7 +4,10 @@
 
         var emojis = {
             ":heart:": "❤",
-            ":joy:": "😂"
+            ":joy:": "😂",
+            ":rofl:": "🤣",
+            ":weary:": "😩",
+            ":cat:": "🐱"
         };
 
         let n = new Date();
@@ -30,7 +33,7 @@
             let author_name = document.createElement('div');
             let new_message = document.createElement('div');
 
-            text = textInput.replace(/:heart:|:joy:/gi, function(matched) {
+            text = textInput.replace(/:heart:|:joy:|:rofl|:weary:|:cat:/gi, function(matched) {
                 return emojis[matched]
             });
 
