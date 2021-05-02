@@ -10,13 +10,13 @@
 
         const trigger = [
             //0 
-            ["hi", "hey", "hello"],
+            ["hi", "hey", "hello", "wassup"],
             //1
             ["how are you", "how are things"],
             //2
             ["what is going on", "what is up"],
             //3
-            ["happy", "good", "well", "fantastic", "cool"],
+            ["happy", "good", "well", "fantastic", "cool", "great"],
             //4
             ["bad", "bored", "tired", "sad"],
             //5
@@ -57,17 +57,28 @@
             ["Meh, nothing much", "Watching some videos", "playing games", "watching a movie"]
         ];
 
-        var shouldBeReplaced = ["!", "?", "."]
+        var shouldBeReplaced = ["!", "?", ".", "'", "&", "@", "%", "^", "#", "*", "(", ")", "-", "_", "="]
+
+        var shouldBeRemoved = {
+            "im doing ": "",
+            "im": ""
+        }
 
         function compare(triggerArray, replyArray, text) {
             let item;
 
-            for (letter in text) {
-                console.log(letter)
+
+            for (letter of text) {
                 if (shouldBeReplaced.includes(letter)) {
-                    text.replace(letter, "")
+                    text = text.replace(letter, "")
                 }
             }
+
+            text = text.replace(/im doing|im/gi, function(matched) {
+                return shouldBeRemoved[matched]
+            });
+
+            console.log(text)
 
             for (let x = 0; x < triggerArray.length; x++) {
                 for (let y = 0; y < replyArray.length; y++) {
