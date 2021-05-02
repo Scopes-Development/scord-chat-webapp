@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html
+{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #171717;
+    font-family: "Poppins", sans-serif;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #B2B2B2;
+}
+
+button, input, button:focus
+{
+    border: none;
+}
+
+h1
+{
+    color: #e6b800;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+}
+
+.create
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    background-color: #292929;
+    min-height: 400px;
+    max-height: 500px;
+    border-bottom: 12px solid #e6b800;
+}
+
+.createButton
+{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #353535;
+    color: #B2B2B2;
+    height: 50px;
+    width: 150px;
+    transition: all 0.2s linear;
+}
+
+.createButton:hover
+{
+    background-color: #424242;
+    color: #e6b800;
+}
+
+.createButton:focus
+{
+    outline: none;
+}
+
+.usernameInput
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 200px;
+    max-width: 350px;
+    min-height: 50px;
+    max-height: 100px;
+    text-align: center;
+    color: #B2B2B2;
+    background-color: #353535;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s all linear;
+}
+
+.usernameInput:focus
+{
+    outline: none;
+    border-bottom: 4px solid #e6b800;
+}
+
+.create .popuptext
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    color: #ff1919;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    z-index: 1;
+}
+
+.create .show
+{
+    visibility: visible;
+}
