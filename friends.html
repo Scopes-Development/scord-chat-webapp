@@ -4,20 +4,31 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="friends.css">
-    <title>Learning</title>
+    <title>Scord | Chat with a friend</title>
 </head>
 
 <body>
 
-    <div class="msgs" id="Messages">
-        <p></p>
-    </div>
 
-    <div class="create">
-        <span class="popuptext" id="popupWarning">Your friend's username cannot exceed 32 characters!</span>
-        <input type="text" class="friendInput" id="friendName" placeholder="Enter Friend's Username">
-        <a href="friends.html"><button type="submit" class="createButton" onclick="setFriend()">Start
-                chatting!</button></a>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-10 col-lg-8 p-3 create justify-content-center align-items-center mx-auto">
+
+                <h1>Scord</h1>
+
+                <span class="popuptext" id="wMax">Your friend's username cannot exceed 32 characters!</span>
+                <span class="popuptext" id="wMin">Your friend's username must be at least 6 characters!</span>
+
+                <input type="text" class="friendInput" id="friendName" placeholder="Enter Your Friend's Username">
+
+                <button type="submit" class="createButton" onclick="setFriend()">Start chatting!</button>
+
+            </div>
+
+        </div>
+
     </div>
 
 

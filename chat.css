@@ -1,7 +1,9 @@
 body {
-    background-color: #4d5154;
-    overflow-x: hidden;
-    overflow-y: auto;
+    background-color: #171717;
+    font-family: "Poppins", sans-serif;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #B2B2B2;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +29,7 @@ body {
     width: 95.5%;
     padding: 30px;
     text-align: center;
-    background: #dcddde;
+    background: #e6b800;
     color: white;
     font-size: 30px;
 }

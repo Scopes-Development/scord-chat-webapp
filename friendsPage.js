@@ -1,36 +1,57 @@
-        function warnMax() {
-            var popup = document.getElementById("popupWarning");
-            popup.classList.toggle("show");
-        }
+function warnMax() {
+    const max = document.getElementById("wMax")
+    max.classList.toggle("show", true)
+}
 
-        function setFriend() {
-            let friendName = document.getElementById("friendName").value;
+function warnMin() {
+    const min = document.getElementById("wMin")
+    min.classList.toggle("show", true)
+}
 
-            if (friendName.length > 32) {
-                warnMax();
-                return
-            }
+function removeWarnMax() {
+    const max = document.getElementById("wMax")
+    max.classList.toggle("show", false)
+}
 
-            var info = JSON.parse(localStorage.getItem('myStorage'));
-            userName = info.username
+function removeWarnMin() {
+    const min = document.getElementById("wMin")
+    min.classList.toggle("show", false)
+}
 
-            var data = {
-                "username": userName,
-                "friend": friendName
-            };
+function setFriend() {
+    let friendName = document.getElementById("friendName").value;
 
-            localStorage.setItem('myStorage', JSON.stringify(data));
-            alert(`Now chatting with ${friendName}`)
-            window.location.replace("chat.html")
+    if (friendName.length > 32) {
+        warnMax()
+        setTimeout(removeWarnMax, 3000)
+        return
+    }
+    if (friendName.length < 6) {
+        warnMin()
+        setTimeout(removeWarnMin, 3000)
+        return
+    }
 
-        }
+    var info = JSON.parse(localStorage.getItem('myStorage'));
+    userName = info.username
 
-        const hotKeys = (e) => {
-            let windowEvent = window.event ? event : e;
+    var data = {
+        "username": userName,
+        "friend": friendName
+    };
 
-            if (windowEvent.keyCode == 13) {
-                setFriend();
-            }
-        }
+    localStorage.setItem('myStorage', JSON.stringify(data));
+    alert(`Now chatting with ${friendName}`)
+    window.location.replace("chat.html")
 
-        document.onkeypress = hotKeys;
+}
+
+const hotKeys = (e) => {
+    let windowEvent = window.event ? event : e;
+
+    if (windowEvent.keyCode == 13) {
+        setFriend();
+    }
+}
+
+document.onkeypress = hotKeys;
