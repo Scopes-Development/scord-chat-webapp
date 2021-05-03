@@ -61,7 +61,7 @@
 
         var shouldBeRemoved = {
             "im doing ": "",
-            "im": ""
+            "im ": ""
         }
 
         function compare(triggerArray, replyArray, text) {
@@ -74,7 +74,7 @@
                 }
             }
 
-            text = text.replace(/im doing|im/gi, function(matched) {
+            text = text.replace(/im doing |im /gi, function(matched) {
                 return shouldBeRemoved[matched]
             });
 
