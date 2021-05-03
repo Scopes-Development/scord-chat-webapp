@@ -1,3 +1,6 @@
+const info = JSON.parse(localStorage.getItem("myStorage"))
+userUserName = info.username
+
 function warnMax() {
     const max = document.getElementById("wMax")
     max.classList.toggle("show", true)
