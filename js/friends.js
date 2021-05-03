@@ -34,14 +34,9 @@ function setFriend() {
     }
 
     const info = JSON.parse(localStorage.getItem("myStorage"))
-    userName = info.userName
+    info.friend = friendName
 
-    const data = {
-        "username": userName,
-        "friend": friendName
-    }
-
-    localStorage.setItem("myStorage", JSON.stringify(data))
+    localStorage.setItem("myStorage", JSON.stringify(info))
     alert(`Now chatting with ${friendName}!`)
     window.location.replace("./../chat/index.html")
 }
