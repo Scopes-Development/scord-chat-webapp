@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-html
-{
+html {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 }
 
-body
-{
+body {
     background-color: #292929;
     font-family: "Poppins", sans-serif;
     justify-content: center !important;
@@ -16,15 +13,16 @@ body
     color: #B2B2B2;
 }
 
-h1
-{
+h1 {
+    position: absolute;
+    left: 80vh;
+    top: 20px;
     color: #000000;
     font-weight: 900;
     font-size: 75px;
 }
 
-input
-{
+input {
     background-color: transparent;
     border: none;
     max-height: 100px;
@@ -34,8 +32,7 @@ input
     width: 100%;
 }
 
-input::placeholder
-{
+input::placeholder {
     color: #B1B1B1;
     font-size: 18px;
     font-weight: 600;
@@ -43,13 +40,11 @@ input::placeholder
     opacity: 0.7;
 }
 
-input:focus
-{
+input:focus {
     outline: none;
 }
 
-#bar
-{
+#bar {
     background-color: #E6B800;
     box-shadow: 0px 12px 25px 7px rgba(0, 0, 0, 0.5);
     min-height: 135px;
@@ -59,13 +54,11 @@ input:focus
     align-items: center;
 }
 
-.header
-{
+.header {
     position: sticky;
 }
 
-.input
-{
+.input {
     bottom: 0;
     position: fixed;
     width: 100%;
@@ -74,17 +67,30 @@ input:focus
     min-height: 75px;
 }
 
-.friendname
-{
+.friendname {
+    position: absolute;
+    left: 10px;
+    top: 50px;
     color: #000000;
     font-weight: 900;
     font-size: 35px;
 }
 
-.date
-{
+.date {
+    position: absolute;
+    left: 150vh;
+    top: 35px;
     color: #000000;
     font-weight: 900;
     font-size: 35px;
     text-align: left;
+}
+
+.msgs {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    width: 99%;
+    height: 74vh;
+    overflow-y: auto;
 }
