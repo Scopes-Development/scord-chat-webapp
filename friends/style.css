@@ -78,14 +78,14 @@ h1
     outline: none;
 }
 
-.usernameInput
+.friendInput
 {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 200px;
-    max-width: 350px;
+    min-width: 300px;
+    max-width: 450px;
     min-height: 50px;
     max-height: 100px;
     text-align: center;
@@ -95,7 +95,7 @@ h1
     transition: 0.3s all linear;
 }
 
-.usernameInput:focus
+.friendInput:focus
 {
     outline: none;
     border-bottom: 4px solid #e6b800;
