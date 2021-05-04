@@ -113,10 +113,9 @@ function replyToUser(text) {
     container.appendChild(author_name);
     container.appendChild(new_message);
 
-    window.setInterval(function() {
-        var elem = document.getElementById('Messages');
-        elem.scrollTop = elem.scrollHeight;
-    }, 5000);
+
+    var elem = document.getElementById('Messages');
+    elem.scrollTop = elem.scrollHeight;
 }
 
 let n = new Date();
@@ -157,10 +156,8 @@ function sendMsg() {
 
     setTimeout(replyToUser, 300, message.toLowerCase());
 
-    window.setInterval(function() {
-        var elem = document.getElementById('Messages');
-        elem.scrollTop = elem.scrollHeight;
-    }, 5000);
+    var elem = document.getElementById('Messages');
+    elem.scrollTop = elem.scrollHeight;
 
     document.getElementById("textMsg").value = "";
 }
