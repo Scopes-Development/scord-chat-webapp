@@ -55,7 +55,8 @@ var shouldBeReplaced = ["!", "?", ".", "'", "&", "@", "%", "^", "#", "*", "(", "
 
 var shouldBeRemoved = {
     "im doing ": "",
-    "im ": ""
+    "im ": "",
+    "i'm ": ""
 }
 
 function compare(triggerArray, replyArray, text) {
@@ -68,7 +69,7 @@ function compare(triggerArray, replyArray, text) {
         }
     }
 
-    text = text.replace(/im doing |im /gi, function(matched) {
+    text = text.replace(/im doing |im |i'm /gi, function(matched) {
         return shouldBeRemoved[matched]
     });
 
