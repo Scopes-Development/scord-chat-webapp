@@ -128,7 +128,6 @@ var todayDate = `${y}/${m}/${d}`
 document.getElementById("textMsg").placeholder = `Message @${friendUserName}`
 
 document.getElementById("friendChattingWith").innerHTML = "@" + friendUserName
-document.getElementById("chatDate").innerHTML = `${todayDate}`
 
 function sendMsg() {
 
