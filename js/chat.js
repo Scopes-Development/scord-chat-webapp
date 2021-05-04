@@ -150,7 +150,7 @@ function sendMsg() {
     container.appendChild(author_name);
     container.appendChild(new_message);
 
-    setTimeout(replyToUser, 500, message.toLowerCase());
+    setTimeout(replyToUser, 300, message.toLowerCase());
 
     document.getElementById("textMsg").value = "";
 }
