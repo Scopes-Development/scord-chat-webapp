@@ -93,8 +93,6 @@ var emojis = {
     ":cat:": "🐱"
 };
 
-var msgs = 0
-
 function replyToUser(text) {
     let textInput = compare(trigger, reply, text);
     let author_name = document.createElement('div');
@@ -113,15 +111,6 @@ function replyToUser(text) {
     container = document.getElementById("Messages");
     container.appendChild(author_name);
     container.appendChild(new_message);
-
-    msgs += 1
-
-    if (msgs >= 10) {
-        window.setInterval(function() {
-            var elem = document.getElementById('Messages');
-            elem.scrollTop = elem.scrollHeight;
-        }, 5000);
-    }
 }
 
 let n = new Date();
@@ -162,15 +151,6 @@ function sendMsg() {
     container.appendChild(new_message);
 
     setTimeout(replyToUser, 500, message.toLowerCase());
-
-    msgs += 1
-
-    if (msgs >= 10) {
-        window.setInterval(function() {
-            var elem = document.getElementById('Messages');
-            elem.scrollTop = elem.scrollHeight;
-        }, 5000);
-    }
 
     document.getElementById("textMsg").value = "";
 }
