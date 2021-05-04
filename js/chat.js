@@ -20,7 +20,7 @@ const trigger = [
     //7
     ["bye", "good bye", "goodbye"],
     //8
-    ["what are you doing", "what you doing"]
+    ["what are you doing", "what you doing"],
 ];
 
 const reply = [
