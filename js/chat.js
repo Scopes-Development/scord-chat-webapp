@@ -111,6 +111,11 @@ function replyToUser(text) {
     container = document.getElementById("Messages");
     container.appendChild(author_name);
     container.appendChild(new_message);
+
+    window.setInterval(function() {
+        var elem = document.getElementById('Messages');
+        elem.scrollTop = elem.scrollHeight;
+    }, 5000);
 }
 
 let n = new Date();
@@ -151,6 +156,11 @@ function sendMsg() {
     container.appendChild(new_message);
 
     setTimeout(replyToUser, 300, message.toLowerCase());
+
+    window.setInterval(function() {
+        var elem = document.getElementById('Messages');
+        elem.scrollTop = elem.scrollHeight;
+    }, 5000);
 
     document.getElementById("textMsg").value = "";
 }
