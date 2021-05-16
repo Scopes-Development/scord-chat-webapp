@@ -29,9 +29,15 @@
 
     <header>
 
-        <nav class="navbar navbar-dark navbar-expand-sm">
+        <nav class="navbar navbar-dark navbar-expand-md">
 
-            <a class="navbar-brand mr-10 nav-link disabled" href="#"><img src="img/Scord.svg" width="75" height="75" class="d-inline-block mr-1 align-bottom" alt=""></a>
+            <a class="navbar-brand mr-10 nav-link disabled" href="#">
+
+                <img src="img/Scord.svg" width="75" height="75" class="d-inline-block d-md-none d-lg-inline-block mr-2 align-bottom" alt=" ">
+
+                <p class="align-bottom d-none d-md-inline-block"> SCORD </p>
+            
+            </a>
 
             <button class="navbar-toggler clickable" type="button" data-toggle="collapse" data-target="#mainmenu">
 
@@ -44,8 +50,14 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
+                        
+                        <a class="nav-link anim" href="/invite"> Invite Bot </a>
+                    
+                    </li>
 
-                        <a class="nav-link anim" href="/faq"> FAQ </a>
+                    <li class="nav-item">
+
+                        <a class="nav-link anim" href="/support"> Support </a>
 
                     </li>
 
@@ -60,12 +72,70 @@
                         <a class="nav-link anim" href="/login"> Log In </a>
 
                     </li>
+                
+                </ul>
+
+            </div>
 
         </nav>
 
     </header>
 
     <main>
+
+        <div class="container">
+
+            <div class="box">
+
+                <div class="row">
+
+                    <div class="col-12 col-md-6 d-inline-block" id="left">
+
+                        <div id="innerBox">
+
+                            <div id="text">
+
+                                <h3>SCORD</h3>
+    
+                                <h1 class="txt">An <p class="wht">Artificial Intelligence</p> chat bot that will be your best friend!</h1>
+    
+                            </div>
+    
+                            <div id="button">
+    
+                                <a id="inner" href="/faq">
+    
+                                    Read more
+    
+                                    <div id="arrowBox">
+    
+                                        <i id="arrow" class="fas fa-arrow-right"></i>
+    
+                                    </div>
+        
+                                </a>
+    
+                            </div>
+
+                        </div>  
+
+                    </div>
+
+                    <div class="col-6 d-none d-md-inline-block" id="right">
+
+                        <img id="botAvatar" src="img/Scord.svg" alt=" ">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- <main>
 
         <div class="container">
 
@@ -107,7 +177,7 @@
 
         </div>
 
-    </main>
+    </main> -->
 
     <script src="js/theme.js"></script>
 
